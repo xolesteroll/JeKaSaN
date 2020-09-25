@@ -15,12 +15,14 @@
     transform: translateX(-35%) rotate(315deg);
     box-shadow: 8px -10px 35px 0px rgba(0, 0, 0, 0.75);
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.7s;
     &:hover {
-        box-shadow: none;
+        // box-shadow: none;
         transform: translateX(-35%) rotate(315deg) scale(0.9);
+        box-shadow: 1px -24px 18px -10px rgba(214,23,23,1);
         &::before {
-            box-shadow: none;
+            // box-shadow: none;
+            box-shadow: 1px -24px 18px -10px rgba(214,23,23,1);
         }
     }
     &::before {
@@ -34,8 +36,8 @@
         right: -113px;
         top: 112px;
         cursor: pointer;
-        transition: all 0.5s;
-        box-shadow: 26px -16px 18px 0px rgba(0,0,0,0.75);
+        transition: all 0.7s;
+        box-shadow: 26px -16px 18px 0px rgba(0, 0, 0, 0.75);
     }
 }
 
@@ -56,6 +58,8 @@
     &__story {
         background: rgb(2, 0, 36);
         background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 170, 171, 1) 100%, rgba(0, 212, 255, 1) 100%);
+        border-left: 10px dotted red;
+        bor
     }
 }
 
