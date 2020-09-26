@@ -1,7 +1,17 @@
 $(function () {
 
   $('.slider__inner').slick({
+    asNavFor: '.words__slider',
     autoplay: 3000,
+    fade: true,
+    prevArrow: '<button class="slick-arrow slick-prev"><div class="heart"><span>Назад</span></div> </button>',
+    nextArrow: '<button class="slick-arrow slick-next"><div class="heart"><span>Вперед</span></div> </button>'
+  });
+
+  $('.words__slider').slick({
+    asNavFor: '.slider__inner',
+    dots: false,
+    arrows: false,
     fade: true
   });
 

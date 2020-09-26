@@ -19,10 +19,10 @@
     &:hover {
         // box-shadow: none;
         transform: translateX(-35%) rotate(315deg) scale(0.9);
-        box-shadow: 1px -24px 18px -10px rgba(214,23,23,1);
+        box-shadow: 1px -24px 18px -10px rgba(214, 23, 23, 1);
         &::before {
             // box-shadow: none;
-            box-shadow: 1px -24px 18px -10px rgba(214,23,23,1);
+            box-shadow: 1px -24px 18px -10px rgba(214, 23, 23, 1);
         }
     }
     &::before {
@@ -62,10 +62,10 @@
         background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 170, 171, 1) 100%, rgba(0, 212, 255, 1) 100%);
         border-left: 10px dotted red;
     }
-    &__link{
+    &__link {
         margin: 0 auto;
     }
-    &__text{
+    &__text {
         padding-bottom: 50px;
         font-size: 35px;
         line-height: 50px;
@@ -73,13 +73,13 @@
         opacity: 0;
         transition: all 0.8s;
         color: #ffffff;
-        span{
+        span {
             color: red;
             font-size: 45px;
         }
     }
 }
-.wrapper{
+.wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -88,30 +88,133 @@
     border: 5px solid red;
     padding: 15px;
     background-color: #fff;
-    .last__row span{
-        font-size: 45px; 
+    .last__row span {
+        font-size: 45px;
         color: red;
     }
-    
+    .heart {
+        position: absolute;
+        width: 100px;
+        height: 175px;
+        border-radius: 50px 50px 0 0;
+        top: 40%;
+        &::before {
+            width: 100px;
+            height: 175px;
+            right: -38px;
+            top: 38px;
+        }
+    }
+    .heart.heart__right {
+        left: 135%;
+        span {
+            position: absolute;
+            top: 105px;
+            left: 25px;
+            font-size: 25px;
+        }
+    }
+    .heart.heart__left {
+        left: -170%;
+        span {
+            position: absolute;
+            top: 100px;
+            left: 25px;
+            font-size: 25px;
+        }
+    }
 }
-.wave{
+.slick-arrow {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top: 40%;
+    z-index: 1;
+    &:focus{
+        outline: none;
+    }
+    span {
+        position: absolute;
+        top: 100px;
+        left: 30px;
+        font-size: 25px;
+        color: #fff;
+    }
+    .heart {
+        width: 100px;
+        height: 175px;
+        border-radius: 50px 50px 0 0;
+        &::before {
+            width: 100px;
+            height: 175px;
+            right: -38px;
+            top: 38px;
+        }
+    }
+}
+.slick-next{
+    right: 150px;
+    
+
+}
+.slick-prev{
+    left: 150px;
+}
+.wave {
     line-height: 40px;
     font-size: 30px;
 }
 
-.slider{
-    &__inner{
-        
+.slider {
+    &__inner {
+        padding-top: 20px;
     }
-    &__item{
+    &__item {
         height: 80vh;
-        width: 50%;
+        width: 60%;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0 auto;
+        border-radius: 10px;
     }
-
+}
+.slider__item{
+    span{
+        position: absolute;
+        bottom: -50px;
+        z-index: 9999;
+    }
+}
+.words__slider{
+    span{
+        text-align: center;
+        padding-top: 30px;
+        font-size: 45px;
+        color: #fff;
+        &.red{
+            color: red;
+        }
+    }
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    a{
+        padding: 5px;
+        padding-top: 20px;
+        z-index: 3;
+        transition: all 0.5s;
+        &:hover{
+            color: red;
+        }
+        &:first-child{
+            margin-left: 50px;
+        }
+        &:last-child{
+            margin-right: 50px;
+        }
+    }
 }
 
 @import "media";
