@@ -1,3 +1,14 @@
+$(function () {
+
+  $('.slider__inner').slick({
+    autoplay: 3000,
+    fade: true
+  });
+
+
+});
+
+
 var text = document.querySelectorAll('.choice__text'),
     heart = document.querySelectorAll('.choice__link');
 
@@ -22,7 +33,7 @@ for (var i = 0; i < textCont.length; i++) {
   (function(i) {
     setTimeout(function() {
       // Created textNode to append
-      var texts = document.createTextNode(textCont[i])
+      var texts = document.createTextNode(textCont[i]);
       var span = document.createElement('span');
       span.appendChild(texts);
 
@@ -32,6 +43,10 @@ for (var i = 0; i < textCont.length; i++) {
     }, 75 * i);
   }(i));
 }
+
+
+
+
 
 
 
