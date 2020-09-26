@@ -164,6 +164,9 @@
 .wave {
     line-height: 40px;
     font-size: 30px;
+    &:nth-child(n + 1250){
+        color: red;
+    }
 }
 
 .slider {
